@@ -1,0 +1,21 @@
+{
+  "name": "@backend-exercise/utils",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test:unit": "vitest unit.test.ts",
+    "test:int": "sst bind vitest int.test.ts",
+    "typecheck": "tsc -noEmit"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.3.1",
+    "@types/aws-lambda": "^8.10.126",
+    "@types/node": "^20.9.1",
+    "msw": "^2.0.8",
+    "sst": "2.42.0",
+    "vitest": "^0.34.6"
+  },
+  "dependencies": {
+    "axios": "^1.6.2"
+  }
+}

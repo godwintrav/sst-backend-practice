@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    volumes:
+      - "postgres_data:/var/lib/postgresql/data"
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: foobar123
+      POSTGRES_USER: postgres
+volumes:
+  postgres_data:

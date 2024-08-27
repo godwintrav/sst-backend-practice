@@ -1,0 +1,35 @@
+{
+  "name": "backend-exercise",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "AWS_PROFILE=godwintrav sst dev",
+    "build": "AWS_PROFILE=godwintrav sst build",
+    "deploy": "AWS_PROFILE=godwintrav sst deploy",
+    "remove": "AWS_PROFILE=godwintrav sst remove",
+    "console": "AWS_PROFILE=godwintrav sst console",
+    "typecheck": "tsc --noEmit",
+    "test:unit": "vitest unit.test.ts",
+    "test:int": "AWS_PROFILE=godwintrav sst bind vitest int.test.ts"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.2",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.9.1",
+    "@types/uuid": "^9.0.7",
+    "aws-cdk-lib": "2.142.1",
+    "constructs": "10.3.0",
+    "fs-extra": "^11.1.1",
+    "sst": "2.42.0",
+    "typescript": "^5.2.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@prisma/client": "^5.6.0",
+    "prisma": "^5.6.0",
+    "uuid": "^9.0.1"
+  }
+}
